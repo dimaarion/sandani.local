@@ -4,7 +4,7 @@ class Menu
     public $db;
     public $sansize;
     public $error = "Ой ошибка";
-    
+
     public function __construct()
     {
         $this->db = new Database();
@@ -12,50 +12,44 @@ class Menu
     }
     public function getMenu()
     {
-        $e = "JSON_EXTRACT(menu,'$**.alias')";
+        $e = "JSON_EXTRACT(articles,'$**.alias')";
         $arr =  $this->db->getRows("SELECT $e  FROM store WHERE id = 1");
         $this->db->Disconnect();
-        
+
         return $arr[0][$e];
     }
- 
+
     public function getMenuPublic()
     {
         $e = "JSON_EXTRACT(menu,'$')";
         $arr =  $this->db->getRows("SELECT $e  FROM store WHERE id = 1");
         $this->db->Disconnect();
-        
+
         return $arr[0][$e];
     }
 
     public function updateMenu()
     {
-
-
-$json = json_decode(file_get_contents('php://input',true));
-print_r($json->save);
-       if($json->save === 'menu'){
-             $e = "JSON_SET(menu,'$[$json->id].names', '$json->names','$[$json->id].alias','$json->alias')"; 
-             $arr =  $this->db->updateRow("UPDATE store SET menu = $e   WHERE id = 1");
-       }else{
-        $this->error = 'Ошибка в updateMenu';
-      }
-       if($this->sansize->getrequest('save') === 'podmenu'){
-            $alias = $this->sansize->getrequest('alias');
-            $names = $this->sansize->getrequest('names');
-            $id = $this->sansize->getrequest('id');
-            $idcild = $this->sansize->getrequest('idcild');
-             $e = "JSON_SET(menu,'$[$id].cild[$idcild].names', '$names','$[$id].cild[$idcild].alias','$alias')"; 
-             $arr =  $this->db->updateRow("UPDATE store SET menu = $e   WHERE id = 1");
-        }else{
-            $this->error = 'Ошибка в updateMenu';
-        }
-       $this->db->Disconnect();
-       
-        
-        
-        
+        $id = 2;
+        $namesCol = 'doors';
+        $names = 'Двери';
+        $alias = 'doors.html';
+        $menu = "JSON_REPLACE(menu,'$[$id].names', '$names','$[$id].alias','$alias')";
+        $articles = "JSON_REPLACE(articles,'$[$id].$namesCol[$id].names', '$names','$[$id].$namesCol[$id].alias','$alias')";
+        $this->db->updateRow("UPDATE store SET menu = $menu , articles = $articles  WHERE id = 1");
+        $this->db->Disconnect();
     }
-     
-   
+
+    public function updatePodMenu()
+    {
+        $cild = "cild[1]";  
+        $id = 1;
+        $namesCol = 'window';
+        $names = 'Двери';
+        $alias = 'GreenEvolution.html';
+        $menu = "JSON_REPLACE(menu,'$[$id].cild[0].names', '$names','$[$id].cild[0].alias','$alias')";
+        $articles = "JSON_REPLACE(articles,'$[$id].$namesCol[$id].names', '$names','$[$id].$namesCol[$id].alias','$alias')";
+        $this->db->updateRow("UPDATE store SET menu = $menu , articles = $articles  WHERE id = 1");
+        $this->db->Disconnect();
+    }
 }
