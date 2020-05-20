@@ -1,6 +1,6 @@
 <?php
 require_once('index.php');
-$art = new Articles();
-echo $art->getArticlesHome();
-
+$art = new Menu();
+$r = $art->getMenuPublic();
+echo  json_encode($r);
 ?>

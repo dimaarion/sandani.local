@@ -13,21 +13,21 @@ class Articles {
     public function getArtRows()
     {
         $alias = $this->sansize->getrequest('alias');
-        $alias = str_replace('/',"",$alias);
-        $alias = str_replace('.html',"",$alias);
-        $e = "JSON_EXTRACT(articles, '$**.$alias')";
-        $r = $this->db->getRows("SELECT $e FROM store");
+        if($alias != '/'){
+            $alias = str_replace('/',"",$alias);
+        }
+        
+        $r = $this->db->getRows("SELECT * FROM articles, menu, menu_articles WHERE articles.art_id = menu_articles.articles AND menu_id = menu_articles.menu AND  menu.menu_alias = ?",[$alias]);
         $this->db->Disconnect();
-        return $r[0][$e];
+        return $r;
        
     }
 
     public function getArticlesHome()
     {
-        $e = "JSON_MERGE_PRESERVE(JSON_EXTRACT(articles, '$[1].window'),JSON_EXTRACT(articles, '$[2].doors'),JSON_EXTRACT(articles, '$[3].doorsavtomatic'),JSON_EXTRACT(articles, '$[4].clients'),JSON_EXTRACT(articles, '$[5].company'))";
-        $r = $this->db->getRows("SELECT $e FROM store");
+       $r = $this->db->getRows("SELECT * FROM articles, menu WHERE articles.menu = menu.menu_id AND menu.parent = ?",[0]);
         $this->db->Disconnect();
-        return $r[0][$e];
+        return $r;
        
     }
 

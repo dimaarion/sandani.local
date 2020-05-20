@@ -2,5 +2,5 @@
 require_once('index.php');
 $art = new Articles();
 $rez = $art->getArtRows();
-echo $rez;
+echo  json_encode($rez) ;
 ?>

@@ -11,8 +11,7 @@ class Contact{
 
     public function getContact()
     {
-        $cont =  $this->sansize->getrequest('contact');
-        $r = $this->db->getRow("SELECT content->>'$.$cont'  FROM contact WHERE id = ?", [1]);
+        $r = $this->db->getRows("SELECT * FROM contact_panel ");
         $this->db->Disconnect();
         return $r;
     }

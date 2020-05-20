@@ -1,5 +1,5 @@
 <?php
 require_once('index.php');
-$connect = new Connect();
-echo $connect->connectPanel();
+$connect = new Contact();
+echo json_encode($connect->getContact());
 ?>

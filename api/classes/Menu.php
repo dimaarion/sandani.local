@@ -4,29 +4,51 @@ class Menu
     public $db;
     public $sansize;
     public $error = "Ой ошибка";
+    public $array_menu;
+    public $menu = array();
 
+    
     public function __construct()
     {
         $this->db = new Database();
         $this->sansize = new Sansize();
     }
+
+
+    public function getMenuPublic() 
+    { 
+        $arr =  $this->db->getRows("SELECT * FROM menu");
+        $this->db->Disconnect();
+        foreach ($arr as $key => $value) {
+            $this->menu[$value['parent']][$value['menu_id']] = $value;
+        }
+        $treeElem = $this->menu[0];
+        $this->genElement($treeElem, $this->menu);
+        return $treeElem;
+    }
+    public function genElement(&$treeElem, $menu)
+    {
+        foreach ($treeElem as $key => $value) {
+            if(!isset($value['cild']) ) {
+                $treeElem[$key]['cild'] = array();
+            }
+            if(array_key_exists ($key, $menu ) ) {
+                $treeElem[$key]['cild'] = $menu[$key];
+                $this->genElement($treeElem[$key]['cild'], $this->menu);
+            }
+        }
+    }  
+
+   
+
     public function getMenu()
     {
-        $e = "JSON_EXTRACT(articles,'$**.alias')";
-        $arr =  $this->db->getRows("SELECT $e  FROM store WHERE id = 1");
+        $arr =  $this->db->getRows("SELECT * FROM menu");
         $this->db->Disconnect();
-
-        return $arr[0][$e];
+        return $arr;
     }
 
-    public function getMenuPublic()
-    {
-        $e = "JSON_EXTRACT(menu,'$')";
-        $arr =  $this->db->getRows("SELECT $e  FROM store WHERE id = 1");
-        $this->db->Disconnect();
 
-        return $arr[0][$e];
-    }
 
     public function updateMenu()
     {
