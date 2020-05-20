@@ -1,0 +1,267 @@
+[
+    {
+        "id": 1,
+        "home": [
+            {
+                "id": 1,
+                "img": "",
+                "alias": "/",
+                "names": "Главная",
+                "title": "Главная",
+                "content": "Главная",
+                "keyWord": "Главная",
+                "description": "Главная"
+            }
+        ],
+        "names": "home"
+    },
+    {
+        "id": 2,
+        "names": "window",
+        "alias": "window.html",
+        "window": [
+            {
+                "id": 1,
+                "img": "slidingdoors_web.jpg",
+                "alias": "window.html",
+                "names": "Оконные системы Salamander",
+                "title": "Окна",
+                "content": "\r\n\r\nСегодня окно в доме – это не только окно во внешний мир, это – типовой элемент интерьера Вашего дома: индивидуальный дизайн  окон в значительной степени определяет общий облик всего здания. Поэтому окна, как элемент фасада,  должны не просто отвечать самым высоким требованиям качества и безопасности  - сегодня заказчик уделяет большое внимание цвету, форме и функциональности.  \r\n\r\nПознакомьтесь более подробно с разработанными компанией Саламандер системами  bluEvolution и Salamander Streamline и Вы увидите, что эти профильные системы доступны практически во всех технических комбинациях и вариантах конструкций.\r\n    ",
+                "keyWord": "Окна",
+                "description": "Окна"
+            },
+            {
+                "id": 2,
+                "img": "grenBV.jpg",
+                "alias": "GreenEvolution.html",
+                "names": "Система GreenEvolution",
+                "title": "GreenEvolution",
+                "content": "greenEvolution — больше, чем система профилей. Эта совместимая и гибкая платформа предлагает множество вариантов для индивидуальных решений. Товары массового производства остались в прошлом: сегодня на смену пришла индивидуальность. Наша совместимая платформа предлагает на выбор шесть различных ассортиментных групп при сохранении полной гибкости. Будь то AD или MD, оба варианта изоляции можно встраивать в одну и ту же систему профилей. greenEvolution подкупает своими инновационными технологиями и оптимальными показателями изоляции. Однако впечатляют не только внутренние параметры: разнообразные возможности дизайна и выбора материала создают визуальные эффекты, и здесь не последнюю роль играют поверхности из натурального материала.",
+                "keyWord": "GreenEvolution",
+                "description": "GreenEvolution",
+                "GreenEvolution": [
+                    {
+                        "id": 1,
+                        "img": "grenBV.jpg",
+                        "alias": "greenEvolution76.html",
+                        "names": "greenEvolution 76",
+                        "content": "Окна greenEvolution 76",
+                        "greenEvolution76": [
+                            {
+                                "id": 1,
+                                "img": "grenBV.jpg",
+                                "alias": "greenEvolution76.html",
+                                "names": "greenEvolution 76",
+                                "title": "greenEvolution 76",
+                                "content": "Окна greenEvolution 76",
+                                "keyWord": "greenEvolution 76",
+                                "description": "greenEvolution 76"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "img": "salamander_bluevolution_92.jpg",
+                "alias": "bluEvolution.html",
+                "names": "Система bluEvolution",
+                "title": "Система bluEvolution",
+                "content": "Окна bluEvolution",
+                "keyWord": "bluEvolution",
+                "description": "bluEvolution",
+                "bluEvolution": [
+                    {
+                        "id": 1,
+                        "img": "bluEvolution82.jpg",
+                        "alias": "bluEvolution82.html",
+                        "names": "bluEvolution 82",
+                        "content": "Окна bluEvolution 82",
+                        "bluEvolution82": [
+                            {
+                                "id": 1,
+                                "img": "bluEvolution82.jpg",
+                                "alias": "bluEvolution82.html",
+                                "names": "bluEvolution 82",
+                                "title": "bluEvolution 82",
+                                "content": "Окна bluEvolution 82",
+                                "keyWord": "bluEvolution 82",
+                                "description": "bluEvolution 82"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "img": "bluEvolution73.jpg",
+                        "alias": "bluEvolution73.html",
+                        "names": "bluEvolution 73",
+                        "content": "Окна bluEvolution 73",
+                        "bluEvolution73": [
+                            {
+                                "id": 1,
+                                "img": "bluEvolution73.jpg",
+                                "alias": "bluEvolution73.html",
+                                "names": "bluEvolution 73",
+                                "title": "bluEvolution 73",
+                                "content": "Окна bluEvolution 73",
+                                "keyWord": "bluEvolution 73",
+                                "description": "bluEvolution 73"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "img": "BluEvolution92.png",
+                        "alias": "bluEvolution92.html",
+                        "names": "bluEvolution 92",
+                        "content": "Окна bluEvolution 92",
+                        "bluEvolution92": [
+                            {
+                                "id": 1,
+                                "img": "BluEvolution92.png",
+                                "alias": "bluEvolution92.html",
+                                "names": "bluEvolution 92",
+                                "title": "bluEvolution 92",
+                                "content": "Окна bluEvolution 92",
+                                "keyWord": "bluEvolution 92",
+                                "description": "bluEvolution 92"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "img": "news2.jpg",
+                "alias": "drugieokna.html",
+                "names": "Окна других производителей",
+                "title": "Другие окна",
+                "content": "Окна Другие окна",
+                "keyWord": "Другие окна",
+                "description": "Другие окна",
+                "drugieokna": [
+                    {
+                        "id": 1,
+                        "img": "streamline.jpg",
+                        "alias": "streamline.html",
+                        "names": "Salamander Streamline",
+                        "content": "Salamander Streamline",
+                        "streamline": [
+                            {
+                                "id": 1,
+                                "img": "streamline.jpg",
+                                "alias": "streamline.html",
+                                "names": "Salamander Streamline",
+                                "title": "Salamander Streamline",
+                                "content": "Salamander Streamline",
+                                "keyWord": "Salamander Streamline",
+                                "description": "Salamander Streamline"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 2,
+                        "img": "advantages.jpg",
+                        "alias": "Salamander3D.html",
+                        "names": "Salamander 3D",
+                        "content": "Salamander 3D",
+                        "Salamander3D": [
+                            {
+                                "id": 1,
+                                "img": "advantages.jpg",
+                                "alias": "Salamander3D.html",
+                                "names": "Salamander 3D",
+                                "title": "Salamander 3D",
+                                "content": "Salamander 3D",
+                                "keyWord": "Salamander 3D",
+                                "description": "Salamander 3D"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "doors": [
+            {
+                "id": 1,
+                "img": "doors-home.jpg",
+                "alias": "doors.html",
+                "names": "Двери",
+                "title": "Двери",
+                "content": "\r\n\r\nДверь всегда создает для нас атмосферу безопасности и защищенности.  Потому что расслабиться и ощущать себя комфортно можно только, если Вы чувствуете себя защищенным. Поэтому для компании Саламандер очень важно претворить в жизнь все Ваши ожидания в отношении индивидуального дизайна, удобства в уходе, а также высочайшего уровня качества и безопасности.  Вот почему, надежность – обязательное условие для  всех дверных систем Саламандер!\r\n\r\nПознакомьтесь с разработанными компанией Саламандер дверными системами  bluEvolution Salamander, а также с раздвижными дверными системами и Вы убедитесь: эти профильные системы доступны практически во всех технических решениях и вариантах дизайна.\r\n",
+                "keyWord": "Двери",
+                "description": "Двери"
+            },
+            {
+                "id": 2,
+                "img": "ECdrive_Zentrum.jpg",
+                "alias": "bluEvolutiondoors.html",
+                "names": "Система bluEvolution",
+                "bluEvolutiondoors": [
+                    {
+                        "id": 1,
+                        "img": "ECdrive_Zentrum.jpg",
+                        "alias": "bluEvolutiondoors.html",
+                        "names": "Система bluEvolution",
+                        "title": "Система bluEvolution",
+                        "content": "\r\n\r\nДверь всегда создает для нас атмосферу безопасности и защищенности. Потому что расслабиться и ощущать себя комфортно можно только, если Вы чувствуете себя защищенным. Поэтому для компании Саламандер очень важно претворить в жизнь все Ваши ожидания в отношении индивидуального дизайна, удобства в уходе, а также высочайшего уровня качества и безопасности.  Вот почему, надежность – обязательное условие для  всех дверных систем Саламандер!\r\n\r\nПознакомьтесь с разработанными компанией Саламандер дверными системами  bluEvolution Salamander, а также с раздвижными дверными системами и Вы убедитесь: эти профильные системы доступны практически во всех технических решениях и вариантах дизайна.\r\n",
+                        "keyWord": "bluEvolution",
+                        "description": "bluEvolution"
+                    }
+                ]
+            }
+        ],
+        "names": "doors"
+    },
+    {
+        "id": 4,
+        "names": "doorsavtomatic",
+        "doorsavtomatic": [
+            {
+                "id": 1,
+                "img": "clients.jpg",
+                "alias": "doorsavtomatic.html",
+                "names": "Автоматические дверные системы",
+                "title": "Автоматические дверные системы",
+                "content": "Саламандер – специалист в области  инновационных высококачественных профильных систем и надежный партнер для производителей окон и дверей.  Высокое качество, широкий ассортимент продукции, компетентный сервис и сопровождение поставок позволяютудовлетворить самые требовательные запросы клиентов.Откройте для себя наши возможности и получите выгоду!",
+                "keyWord": "Автоматические дверные системы",
+                "description": "Автоматические дверные системы"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "names": "clients",
+        "clients": [
+            {
+                "id": 1,
+                "img": "clients.jpg",
+                "alias": "clients.html",
+                "names": "Клиентам",
+                "title": "Клиентам",
+                "content": "Саламандер – специалист в области  инновационных высококачественных профильных систем и надежный партнер для производителей окон и дверей.  Высокое качество, широкий ассортимент продукции, компетентный сервис и сопровождение поставок позволяютудовлетворить самые требовательные запросы клиентов.Откройте для себя наши возможности и получите выгоду!",
+                "keyWord": "Клиентам",
+                "description": "Клиентам"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "names": "company",
+        "company": [
+            {
+                "id": 1,
+                "img": "company.jpg",
+                "alias": "company.html",
+                "names": "О фмрме",
+                "title": "О фмрме",
+                "content": "О фмрме",
+                "keyWord": "О фмрме",
+                "description": "О фмрме"
+            }
+        ]
+    }
+]
