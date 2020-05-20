@@ -1,0 +1,13 @@
+ErrorDocument 404 /err.php
+
+
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^GET\.*/index\.html\HTTP
+RewriteRule ^ (.*)index\.html$$1 [R=301,L]
+RewriteRule ^index.html$ / [QSA,R]
+
+
+RewriteRule ^([a-z]+)$1.html ?alias=$1 [L]
+ 
+
