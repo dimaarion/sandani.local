@@ -39,7 +39,7 @@ CREATE TABLE `articles` (
   `art_subcontent` text NOT NULL,
   `art_content` text NOT NULL,
   `params` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `articles`
@@ -63,7 +63,7 @@ CREATE TABLE `contact_panel` (
   `names` varchar(255) NOT NULL,
   `img` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `contact_panel`
@@ -90,7 +90,7 @@ CREATE TABLE `menu` (
   `menu_content` text NOT NULL,
   `menu_img` varchar(255) NOT NULL,
   `parent` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `menu`
@@ -125,7 +125,7 @@ CREATE TABLE `menu_articles` (
   `menu_art_id` int(11) NOT NULL,
   `menu` int(11) NOT NULL,
   `articles` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `menu_articles`
@@ -156,7 +156,7 @@ CREATE TABLE `store` (
   `menu` json NOT NULL,
   `articles` json NOT NULL,
   `connect_panel` json NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `store`
