@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 17 2020 г., 06:31
+-- Время создания: Май 21 2020 г., 06:51
 -- Версия сервера: 8.0.15
 -- Версия PHP: 7.3.9
 
@@ -21,6 +21,129 @@ SET time_zone = "+00:00";
 --
 -- База данных: `sandani`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `articles`
+--
+
+CREATE TABLE `articles` (
+  `art_id` int(11) NOT NULL,
+  `art_img` varchar(255) NOT NULL,
+  `art_name` varchar(255) NOT NULL,
+  `art_title` varchar(255) NOT NULL,
+  `art_alias` varchar(255) NOT NULL,
+  `art_keyword` varchar(255) NOT NULL,
+  `art_descript` varchar(255) NOT NULL,
+  `art_subcontent` text NOT NULL,
+  `art_content` text NOT NULL,
+  `params` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `articles`
+--
+
+INSERT INTO `articles` (`art_id`, `art_img`, `art_name`, `art_title`, `art_alias`, `art_keyword`, `art_descript`, `art_subcontent`, `art_content`, `params`) VALUES
+(1, 'grenBV.jpg', 'Оконные системы Salamander', 'Оконные системы Salamander', 'window.html', 'Оконные системы Salamander', 'Оконные системы Salamander', 'Сегодня окно в доме – это не только окно во внешний мир, это – типовой элемент интерьера Вашего дома: индивидуальный дизайн  окон в значительной степени определяет общий облик всего здания. Поэтому окна, как элемент фасада,  должны не просто отвечать самым высоким требованиям качества и безопасности  - сегодня заказчик уделяет большое внимание цвету, форме и функциональности.  ', '\r\n\r\nСегодня окно в доме – это не только окно во внешний мир, это – типовой элемент интерьера Вашего дома: индивидуальный дизайн  окон в значительной степени определяет общий облик всего здания. Поэтому окна, как элемент фасада,  должны не просто отвечать самым высоким требованиям качества и безопасности  - сегодня заказчик уделяет большое внимание цвету, форме и функциональности.  \r\n\r\nПознакомьтесь более подробно с разработанными компанией Саламандер системами  bluEvolution и Salamander Streamline и Вы увидите, что эти профильные системы доступны практически во всех технических комбинациях и вариантах конструкций.\r\n', 1),
+(2, 'salamander_bluevolution_92.jpg', 'Система bluEvolution', 'Система bluEvolution', 'bluEvolution.html', 'Система bluEvolution', 'Система bluEvolution', 'Система bluEvolution', 'Система bluEvolution', 0),
+(3, 'news2.jpg', 'Система GreenEvolution', 'Система GreenEvolution', 'GreenEvolution.html', 'Система GreenEvolution', 'Система GreenEvolution', 'Система GreenEvolution', 'Система GreenEvolution', 0),
+(4, 'grenBV.jpg', 'Окна других производителей', 'Окна других производителей', 'drugieokna.html', 'Окна других производителей', 'Окна других производителей', 'Окна других производителей', 'Окна других производителей', 0),
+(5, 'ECdrive_Zentrum.jpg', 'Двери Salamander', 'Двери Salamander', 'doors.html', 'Двери Salamander', 'Двери Salamander', 'Двери Salamander', 'Двери Salamander', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `contact_panel`
+--
+
+CREATE TABLE `contact_panel` (
+  `id` int(11) NOT NULL,
+  `names` varchar(255) NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `contact_panel`
+--
+
+INSERT INTO `contact_panel` (`id`, `names`, `img`, `alias`) VALUES
+(1, 'Калькулятор расчета окон', 'calculator.png', 'calculator.html'),
+(2, 'Отправка почты', 'email.png', 'Отправка почты'),
+(3, '0 (552) 2-46-49, 0(777)2-94-10', 'android_mobile_phone.png', '0 (552) 2-46-49, 0(777)2-94-10');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `menu`
+--
+
+CREATE TABLE `menu` (
+  `menu_id` int(11) NOT NULL,
+  `menu_name` varchar(255) NOT NULL,
+  `menu_alias` varchar(255) NOT NULL,
+  `menu_title` varchar(255) NOT NULL,
+  `menu_keyword` varchar(255) NOT NULL,
+  `menu_descript` varchar(255) NOT NULL,
+  `menu_content` text NOT NULL,
+  `menu_img` varchar(255) NOT NULL,
+  `parent` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `menu`
+--
+
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_alias`, `menu_title`, `menu_keyword`, `menu_descript`, `menu_content`, `menu_img`, `parent`) VALUES
+(1, 'Главная', '/', 'Главная', 'Главная', 'Главная', 'Главная', '', 0),
+(2, 'Окна', 'window.html', 'Окна', 'Окна', 'Окна', 'Сегодня окно в доме – это не только окно во внешний мир, это – типовой элемент интерьера Вашего дома: индивидуальный дизайн  окон в значительной степени определяет общий облик всего здания. Поэтому окна, как элемент фасада,  должны не просто отвечать самым высоким требованиям качества и безопасности  - сегодня заказчик уделяет большое внимание цвету, форме и функциональности.  \\r\\n\\r\\nПознакомьтесь более подробно с разработанными компанией Саламандер системами  bluEvolution и Salamander Streamline и Вы увидите, что эти профильные системы доступны практически во всех технических комбинациях и вариантах конструкций.\\r\\n    \",\r\n                ', 'slidingdoors_web.jpg', 0),
+(3, 'Двери', 'doors.html', 'Двери', 'Двери', 'Двери', 'Двери', 'doors-home.jpg', 0),
+(4, 'Автоматические дверные системы', 'doorsavtomatic.html', 'Автоматические дверные системы', 'Автоматические дверные системы', 'Автоматические дверные системы', 'Саламандер – специалист в области  инновационных высококачественных профильных систем и надежный партнер для производителей окон и дверей.  Высокое качество, широкий ассортимент продукции, компетентный сервис и сопровождение поставок позволяютудовлетворить самые требовательные запросы клиентов.Откройте для себя наши возможности и получите выгоду!\",\r\n                ', 'clients.jpg', 0),
+(5, 'Клиентам', 'clients.html', 'Клиентам', 'Клиентам', 'Клиентам', 'Саламандер – специалист в области  инновационных высококачественных профильных систем и надежный партнер для производителей окон и дверей.  Высокое качество, широкий ассортимент продукции, компетентный сервис и сопровождение поставок позволяютудовлетворить самые требовательные запросы клиентов.Откройте для себя наши возможности и получите выгоду!\",\r\n                ', 'clients.jpg', 0),
+(6, 'О фмрме', 'company.html', 'О фмрме', 'О фмрме', 'О фмрме', 'О фмрме', 'company.jpg', 0),
+(7, 'Система GreenEvolution', 'GreenEvolution.html', 'Система GreenEvolution', 'Система GreenEvolution', 'Система GreenEvolution', 'greenEvolution — больше, чем система профилей. Эта совместимая и гибкая платформа предлагает множество вариантов для индивидуальных решений. Товары массового производства остались в прошлом: сегодня на смену пришла индивидуальность. Наша совместимая платформа предлагает на выбор шесть различных ассортиментных групп при сохранении полной гибкости. Будь то AD или MD, оба варианта изоляции можно встраивать в одну и ту же систему профилей. greenEvolution подкупает своими инновационными технологиями и оптимальными показателями изоляции. Однако впечатляют не только внутренние параметры: разнообразные возможности дизайна и выбора материала создают визуальные эффекты, и здесь не последнюю роль играют поверхности из натурального материала.\r\n                ', 'grenBV.jpg', 2),
+(8, 'Система bluEvolution', 'bluEvolution.html', 'Система bluEvolution', 'Система bluEvolution', 'Система bluEvolution', 'Система bluEvolution', 'salamander_bluevolution_92.jpg', 2),
+(9, 'Окна других производителей', 'drugieokna.html', 'Окна других производителей', 'Окна других производителей', 'Окна других производителей', 'Окна других производителей', 'news2.jpg', 2),
+(10, 'greenEvolution 76', 'greenEvolution76.html', 'greenEvolution 76', 'greenEvolution 76', 'greenEvolution 76', 'greenEvolution 76', 'grenBV.jpg', 7),
+(11, 'bluEvolution 82', 'bluEvolution82.html', 'bluEvolution 82', 'bluEvolution 82', 'bluEvolution 82', 'bluEvolution 82', 'bluEvolution82.jpg', 8),
+(12, 'bluEvolution 73', 'bluEvolution73.html', 'bluEvolution 73', 'bluEvolution 73', 'bluEvolution 73', 'bluEvolution 73', 'bluEvolution73.jpg', 8),
+(13, 'bluEvolution 92', 'bluEvolution92.html', 'bluEvolution 92', 'bluEvolution 92', 'bluEvolution 92', 'bluEvolution 92', 'BluEvolution92.png', 8),
+(14, 'Salamander Streamline', 'streamline.html', 'Salamander Streamline', 'Salamander Streamline', 'Salamander Streamline', 'Salamander Streamline', 'streamline.jpg', 9),
+(15, 'Salamander 3D', 'Salamander3D.html', 'Salamander 3D', 'Salamander 3D', 'Salamander 3D', 'Salamander 3D', 'advantages.jpg', 9),
+(16, 'Система bluEvolution', 'bluEvolutiondoors.html', 'Система bluEvolution', 'Система bluEvolution', 'Система bluEvolution', 'Дверь всегда создает для нас атмосферу безопасности и защищенности. Потому что расслабиться и ощущать себя комфортно можно только, если Вы чувствуете себя защищенным. Поэтому для компании Саламандер очень важно претворить в жизнь все Ваши ожидания в отношении индивидуального дизайна, удобства в уходе, а также высочайшего уровня качества и безопасности.  Вот почему, надежность – обязательное условие для  всех дверных систем Саламандер!\\r\\n\\r\\nПознакомьтесь с разработанными компанией Саламандер дверными системами  bluEvolution Salamander, а также с раздвижными дверными системами и Вы убедитесь: эти профильные системы доступны практически во всех технических решениях и вариантах дизайна.\\r\\n\",\r\n                        ', 'ECdrive_Zentrum.jpg', 3),
+(17, 'Автоматические дверные системы', 'doorsavtomatic.html', 'Автоматические дверные системы', 'Автоматические дверные системы', 'Автоматические дверные системы', 'Автоматические дверные системы', 'clients.jpg', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `menu_articles`
+--
+
+CREATE TABLE `menu_articles` (
+  `menu_art_id` int(11) NOT NULL,
+  `menu` int(11) NOT NULL,
+  `articles` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `menu_articles`
+--
+
+INSERT INTO `menu_articles` (`menu_art_id`, `menu`, `articles`) VALUES
+(1, 1, 1),
+(4, 1, 2),
+(5, 1, 3),
+(6, 1, 4),
+(7, 2, 1),
+(8, 3, 5),
+(9, 1, 5),
+(10, 7, 3),
+(11, 8, 2),
+(12, 9, 4),
+(13, 2, 2),
+(14, 2, 3);
 
 -- --------------------------------------------------------
 
@@ -47,6 +170,30 @@ INSERT INTO `store` (`id`, `menu`, `articles`, `connect_panel`) VALUES
 --
 
 --
+-- Индексы таблицы `articles`
+--
+ALTER TABLE `articles`
+  ADD PRIMARY KEY (`art_id`);
+
+--
+-- Индексы таблицы `contact_panel`
+--
+ALTER TABLE `contact_panel`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `menu`
+--
+ALTER TABLE `menu`
+  ADD PRIMARY KEY (`menu_id`);
+
+--
+-- Индексы таблицы `menu_articles`
+--
+ALTER TABLE `menu_articles`
+  ADD PRIMARY KEY (`menu_art_id`);
+
+--
 -- Индексы таблицы `store`
 --
 ALTER TABLE `store`
@@ -55,6 +202,30 @@ ALTER TABLE `store`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `articles`
+--
+ALTER TABLE `articles`
+  MODIFY `art_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT для таблицы `contact_panel`
+--
+ALTER TABLE `contact_panel`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT для таблицы `menu`
+--
+ALTER TABLE `menu`
+  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT для таблицы `menu_articles`
+--
+ALTER TABLE `menu_articles`
+  MODIFY `menu_art_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT для таблицы `store`
