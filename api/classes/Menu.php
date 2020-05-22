@@ -48,7 +48,13 @@ class Menu
         return $arr;
     }
 
-
+   public function getMenuAdminId()
+   {
+      $id = $this->sansize->getrequestInt('id');
+       $arr =  $this->db->getRow("SELECT * FROM menu WHERE menu_id = ?",[$id]);
+        $this->db->Disconnect();
+        return $arr;
+   }
 
     public function updateMenu()
     {
