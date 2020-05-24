@@ -56,6 +56,23 @@ class Menu
         return $arr;
    }
 
+   public function insertMenu()
+   {
+
+       $save = $this->sansize->getrequest('menu_save');
+       if ($save == 'save') {
+       $nemes = $this->sansize->getrequest('menu_name');
+       $alias = $this->sansize->getrequest('menu_alias');
+       $title = $this->sansize->getrequest('menu_title');
+       $keyword = $this->sansize->getrequest('menu_keyword');
+       $descript = $this->sansize->getrequest('menu_descript');
+       $content = $this->sansize->getrequest('menu_content');
+       $img = $this->sansize->getrequest('menu_img');
+       $parent = $this->sansize->getrequest('parent');
+       $this->db->insertRow("INSERT INTO menu (menu_name, menu_alias, menu_title,  menu_keyword, menu_descript,menu_content,menu_img, parent) 
+        VALUE(?,?,?,?,?,?,?,?)", ["$nemes", "$alias", "$title","$keyword","$descript","$content","$img","$parent"]); 
+        }
+   }
     public function updateMenu()
     {
         $id = 2;
