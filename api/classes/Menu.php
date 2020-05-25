@@ -73,15 +73,11 @@ class Menu
         VALUE(?,?,?,?,?,?,?,?)", ["$nemes", "$alias", "$title","$keyword","$descript","$content","$img","$parent"]); 
         }
    }
-    public function updateMenu()
+    public function deleteMenu()
     {
-        $id = 2;
-        $namesCol = 'doors';
-        $names = 'Двери';
-        $alias = 'doors.html';
-        $menu = "JSON_REPLACE(menu,'$[$id].names', '$names','$[$id].alias','$alias')";
-        $articles = "JSON_REPLACE(articles,'$[$id].$namesCol[$id].names', '$names','$[$id].$namesCol[$id].alias','$alias')";
-        $this->db->updateRow("UPDATE store SET menu = $menu , articles = $articles  WHERE id = 1");
+        $id = $this->sansize->getrequest('menu_id');
+        $id = str_replace('delete-','',$id);
+        $this->db->deleteRow("DELETE menu WHERE id = ?",[$id]);
         $this->db->Disconnect();
     }
 
