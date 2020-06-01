@@ -57,6 +57,18 @@ class Menu
         return $arr;
     }
 
+
+    public function getMenuArtId()
+    {
+        $id = $this->sansize->getrequest('menu_id');
+       
+
+        $r = $this->db->getRows("SELECT * FROM articles, menu, menu_articles WHERE articles.art_id = menu_articles.articles AND menu_id = menu_articles.menu AND  menu.menu_id = ?", [$id]);
+        $this->db->Disconnect();
+        return $r;
+    }
+
+
     public function insertMenu()
     {
 
@@ -97,16 +109,7 @@ class Menu
         $content = $this->sansize->getrequest('menu_content');
         $img = $this->sansize->getrequest('menu_img');
         $parent = $this->sansize->getrequest('parent');
-        $this->db->updateRow("UPDATE 
-        menu SET   
-        menu_name = ?, 
-        menu_alias = ?, 
-        menu_title = ?, 
-        menu_keyword = ?, 
-        menu_descript = ?, 
-        menu_content = ?, 
-        menu_img = ?, 
-        parent = ?
+        $this->db->updateRow("UPDATE menu SET   menu_name = ?, menu_alias = ?, menu_title = ?, menu_keyword = ?, menu_descript = ?, menu_content = ?, menu_img = ?, parent = ?
         WHERE menu_id = ?",[$names, $alias, $title, $keyword, $descript, $content, $img, $parent, $id]);
         $this->db->Disconnect();
     }
