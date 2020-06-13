@@ -109,13 +109,13 @@ class Menu
         $id_menu_art = $this->sansize->getrequest('menu_art_id');
         $names = $this->sansize->getrequest('menu_name');
         $alias = $this->sansize->getrequest('menu_alias');
-        if($alias != '/'){
-            if(!preg_match('/[html]/', $alias)){
-            $alias = $alias . '.html';
+        if ($alias != '/') {
+            if (!preg_match('/[html]/', $alias)) {
+                $alias = $alias . '.html';
+            }
         }
-        }
-        
-        
+
+
         $title = $this->sansize->getrequest('menu_title');
         $keyword = $this->sansize->getrequest('menu_keyword');
         $descript = $this->sansize->getrequest('menu_descript');
@@ -141,6 +141,15 @@ class Menu
             $values = '(' . $id_menu . ',' . $art . ')';
             file_put_contents('test.txt', $values);
             $this->db->insertRow("INSERT INTO menu_articles( menu,articles) VALUES $values");
+            $this->db->Disconnect();
+        }
+    }
+
+    public function deleteMenuArt()
+    {
+        $id = $this->sansize->getrequest('delmenuartid');
+        if ($id != 0) {
+            $this->db->deleteRow("DELETE FROM menu_articles WHERE menu_art_id = ?", [$id]);
             $this->db->Disconnect();
         }
     }

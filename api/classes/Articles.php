@@ -18,6 +18,23 @@ class Articles
         return $r;
     }
 
+    public function getArticlesAlias()
+    {
+        $alias = $this->sansize->getrequest('art_alias');
+        $alias = str_replace('/', "", $alias);
+        $r = $this->db->getRow("SELECT * FROM articles WHERE art_alias = ?",[$alias]);
+        $this->db->Disconnect();
+        return $r;
+    }
+
+    public function getArticlesid()
+    {
+        $id = $this->sansize->getrequest('art_id');
+        $r = $this->db->getRow("SELECT * FROM articles WHERE art_id = ?", [$id]);
+        $this->db->Disconnect();
+        return $r;
+    }
+
     public function getArtRows()
     {
         $alias = $this->sansize->getrequest('alias');
@@ -37,7 +54,7 @@ class Articles
         return $r;
     }
 
-    
+
 
     public function adminPageImg()
     {
