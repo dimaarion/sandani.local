@@ -1,27 +1,38 @@
 <?php
-class DInsert{
+class DInsert
+{
     public $db;
-    public $sansize;
     public $tables;
-    public $column = ['wadwa','wdwawdaw','wdwawdw','qwdqwdqdwqw','4545'];
+    public $column = [];
     public $paste = [];
 
-    public function __construct()
+
+    public function __construct($tables, $column, $paste)
     {
         $this->db = new Database();
-        $this->sansize = new Sansize();
-        
+        $this->tables = $tables;
+        $this->column = $column;
+        $this->paste = $paste;
+        $this->DQuery();
     }
 
     public function DQuery()
     {
+
         $tables = $this->tables;
         $column = $this->column;
-        $columnv = preg_replace('/[a-z_0-9]+/','?', $column);
-        $columnv = implode(',', $columnv);
-        $column = implode(',', $column);
-        $this->db->insertRow("INSERT INTO $tables ($column) VALUE($columnv)", []);
-        $this->db->Disconnect();
+        $paste = $this->paste;
 
+        if (count($column) > 0 && count($paste) > 0 && count($column) == count($paste)) {
+            $columnv = preg_replace('/[a-z_0-9]+/', '?', $column);
+            $columnv = implode(',', $columnv);
+            $column = implode(',', $column);
+            $pastes = implode('', $paste);
+
+            if ($tables != '' && $column != '' && $pastes != '') {
+                $this->db->insertRow("INSERT INTO $tables ($column) VALUE($columnv)", $paste);
+                $this->db->Disconnect();
+            }
+        }
     }
 }
