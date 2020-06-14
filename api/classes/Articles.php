@@ -22,7 +22,7 @@ class Articles
     {
         $alias = $this->sansize->getrequest('art_alias');
         $alias = str_replace('/', "", $alias);
-        $r = $this->db->getRow("SELECT * FROM articles WHERE art_alias = ?",[$alias]);
+        $r = $this->db->getRow("SELECT * FROM articles WHERE art_alias = ?", [$alias]);
         $this->db->Disconnect();
         return $r;
     }
@@ -54,7 +54,26 @@ class Articles
         return $r;
     }
 
-
+    public function insertArticles()
+    {
+        $save = $this->sansize->getrequest('art_save');
+        if ($save == 'save') {
+            
+            $names = $this->sansize->getrequest('art_name');
+            $alias = $this->sansize->getrequest('art_alias');
+            $alias = $alias . '.html';
+            $title = $this->sansize->getrequest('art_title');
+            $keyword = $this->sansize->getrequest('art_keyword');
+            $descript = $this->sansize->getrequest('art_descript');
+            $subcontent = $this->sansize->getrequest('art_subcontent');
+            $content = $this->sansize->getrequest('art_content');
+            $img = $this->sansize->getrequest('art_img');
+            $params = $this->sansize->getrequest('params');
+            $this->db->insertRow("INSERT INTO menu (art_img, art_name, art_title, art_alias,  art_keyword, art_descript, art_subcontent,art_content,params) 
+        VALUE(?,?,?,?,?,?,?,?,?)", ["$img", "$names", "$title", "$alias", "$keyword", "$descript", "$subcontent", "$content", "$params"]);
+            $this->db->Disconnect();
+        }
+    }
 
     public function adminPageImg()
     {
