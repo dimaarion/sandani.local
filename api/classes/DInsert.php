@@ -5,6 +5,7 @@ class DInsert
     public $tables;
     public $column = [];
     public $paste = [];
+    public $err = 'Статья успешно создана!';
 
 
     public function __construct($tables, $column, $paste)
@@ -32,7 +33,13 @@ class DInsert
             if ($tables != '' && $column != '' && $pastes != '') {
                 $this->db->insertRow("INSERT INTO $tables ($column) VALUE($columnv)", $paste);
                 $this->db->Disconnect();
+                $this->err = 'Статья успешно создана!';
+            }else{
+                $this->err = 'Ошибка! не все заполнено.';
             }
+        } else {
+            $this->err = 'Ошибка! массивы не совпадают.';
         }
+    return  $this->err;
     }
 }

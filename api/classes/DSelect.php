@@ -17,7 +17,7 @@ class DSelect
 
     public function queryRow($where, $id)
     {
-        $where = $this->where;
+        
         $where = $where.'=?';
         $tables = $this->tables;
         $arr =  $this->db->getRow("SELECT * FROM $tables WHERE $where", [$id]);

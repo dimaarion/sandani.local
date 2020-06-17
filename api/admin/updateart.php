@@ -1,7 +1,7 @@
 <?php
 require_once('index.php');
 $sansize = new Sansize();
-$insert = new DInsert(
+$art =  new DUpdate(
     'articles',
     [
         'art_img',
@@ -12,8 +12,10 @@ $insert = new DInsert(
         'art_descript',
         'art_subcontent',
         'art_content',
-        'params'
+        'params',
+        'art_id'
     ],
+
     [
         $sansize->getrequest('art_img'),
         $sansize->getrequest('art_name'),
@@ -22,10 +24,9 @@ $insert = new DInsert(
         $sansize->getrequest('art_keyword'),
         $sansize->getrequest('art_descript'),
         $sansize->getrequest('art_subcontent'),
-        $sansize->getrequest('art_content'),
+        $sansize->getrequest('art_content'), 
         $sansize->getrequest('params'),
-        
-    ]
+    ],
+    $sansize->getrequest('art_id')
 );
-
-echo json_encode($insert->err);
+echo json_encode($_REQUEST);

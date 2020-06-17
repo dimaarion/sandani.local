@@ -1,5 +1,5 @@
 <?php
 require_once('index.php');
-$art = new Articles();
-$r = $art->getArticles();
+$art = new DSelect('articles');
+$r = $art->queryRows();
 echo  json_encode($r);

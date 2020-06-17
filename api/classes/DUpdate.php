@@ -6,7 +6,7 @@ class DUpdate
     public $column = [];
     public $paste = [];
     public $id;
-    public $err = 'ok';
+    public $err;
 
     public function __construct($tables, $column, $paste, $id)
     {

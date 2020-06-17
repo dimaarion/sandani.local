@@ -69,39 +69,6 @@ class Menu
     }
 
 
-    public function insertMenu()
-    {
-
-        $save = $this->sansize->getrequest('menu_save');
-        if ($save == 'save') {
-            $id_menu_art = $this->sansize->getrequest('menu_art_id');
-            $nemes = $this->sansize->getrequest('menu_name');
-            $alias = $this->sansize->getrequest('menu_alias');
-            $alias = $alias . '.html';
-            $title = $this->sansize->getrequest('menu_title');
-            $keyword = $this->sansize->getrequest('menu_keyword');
-            $descript = $this->sansize->getrequest('menu_descript');
-            $content = $this->sansize->getrequest('menu_content');
-            $img = $this->sansize->getrequest('menu_img');
-            $parent = $this->sansize->getrequest('parent');
-            $this->db->insertRow("INSERT INTO menu (menu_art_id, menu_name, menu_alias, menu_title,  menu_keyword, menu_descript,menu_content,menu_img, parent) 
-        VALUE(?,?,?,?,?,?,?,?,?)", ["$id_menu_art", "$nemes", "$alias", "$title", "$keyword", "$descript", "$content", "$img", "$parent"]);
-            $this->db->Disconnect();
-        }
-    }
-    public function deleteMenu()
-    {
-        $delete = $this->sansize->getrequest('menu_delete');
-        if ($delete == 'delete') {
-            $id = $this->sansize->getrequest('menu_id');
-            $idmenuart = $this->sansize->getrequest('menu_art_id');
-            $id = str_replace('delete-', '', $id);
-            $this->db->deleteRow("DELETE FROM menu WHERE menu_id = ?", [$id]);
-            $this->db->deleteRow("DELETE FROM menu_articles WHERE menu = ?", [$idmenuart]);
-            $this->db->Disconnect();
-        }
-    }
-
     public function updateMenu()
     {
 
@@ -145,12 +112,5 @@ class Menu
         }
     }
 
-    public function deleteMenuArt()
-    {
-        $id = $this->sansize->getrequest('delmenuartid');
-        if ($id != 0) {
-            $this->db->deleteRow("DELETE FROM menu_articles WHERE menu_art_id = ?", [$id]);
-            $this->db->Disconnect();
-        }
-    }
+    
 }
