@@ -33,7 +33,12 @@ class DUpdate
                 $columnv = $columnv . '=?';
                 $this->db->updateRow("UPDATE $tables SET $columnv WHERE $id", $paste);
                 $this->db->Disconnect();
+                $this->err = 1;
+            } else {
+                $this->err = 0;
             }
+        } else {
+            $this->err = 0;
         }
     }
 }

@@ -48,4 +48,12 @@ class DSelect
         $this->db->Disconnect();
         return $arr;
     }
+
+    public function queryRowJtest()
+    {
+        $tables = $this->tables;
+        $arr =  $this->db->getRows("SELECT * FROM $tables WHERE okno='Одностворчатое окно' AND stvorka='глухое'");
+        $this->db->Disconnect();
+        return $arr;
+    }
 }
