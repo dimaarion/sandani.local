@@ -1,6 +1,6 @@
 <?php
 require_once('index.php');
-$art = new Menu();
-$r = $art->getMenuPublic();
+$art = new DSelect('menu');
+$r = $art->queryRows();
 echo  json_encode($r);
 ?>

@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <?php print_r($_REQUEST); ?>
     <div id="root"></div>
     <script>
         ! function(e) {
@@ -92,8 +91,8 @@
             t()
         }([])
     </script>
-    <script src="/static/js/2.d4b79ef5.chunk.js"></script>
-    <script src="/static/js/main.64ed1b7f.chunk.js"></script>
+    <script src="/static/js/2.18056be9.chunk.js"></script>
+    <script src="/static/js/main.1c9d08e0.chunk.js"></script>
     <script src="/js/message.js"></script>
 </body>
 

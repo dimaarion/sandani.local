@@ -6,18 +6,20 @@ class Menu
     public $error = "Ой ошибка";
     public $array_menu;
     public $menu = array();
+    public $tables = '';
 
 
-    public function __construct()
+    public function __construct($tables = '')
     {
         $this->db = new Database();
         $this->sansize = new Sansize();
+        $this->tables = $tables;
     }
 
 
     public function getMenuPublic()
     {
-        $arr =  $this->db->getRows("SELECT * FROM menu");
+        $arr =  $this->db->getRows("SELECT * FROM $this->tables");
         $this->db->Disconnect();
         foreach ($arr as $key => $value) {
             $this->menu[$value['parent']][$value['menu_id']] = $value;
@@ -106,7 +108,7 @@ class Menu
             $art = implode(' ', $art);
             $art = str_replace(' ', $st, $art);
             $values = '(' . $id_menu . ',' . $art . ')';
-            file_put_contents('test.txt', $values);
+
             $this->db->insertRow("INSERT INTO menu_articles( menu,articles) VALUES $values");
             $this->db->Disconnect();
         }

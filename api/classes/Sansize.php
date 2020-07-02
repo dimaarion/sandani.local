@@ -2,8 +2,10 @@
 class Sansize
 {
 public function getrequest($get)
-{       
-        $get =  filter_var($_REQUEST[$get], FILTER_SANITIZE_STRING);
+{
+        $get = $_REQUEST[$get];
+        $get = htmlspecialchars($get);
+        $get =  filter_var($get, FILTER_SANITIZE_STRING);
         
         return $get;
 }

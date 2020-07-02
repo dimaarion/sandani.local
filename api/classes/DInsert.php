@@ -8,7 +8,7 @@ class DInsert
     public $err = 'Статья успешно создана!';
 
 
-    public function __construct($tables, $column, $paste)
+    public function __construct($tables = '', $column = [], $paste = [])
     {
         $this->db = new Database();
         $this->tables = $tables;
@@ -25,11 +25,10 @@ class DInsert
         $paste = $this->paste;
 
         if (count($column) > 0 && count($paste) > 0 && count($column) == count($paste)) {
-            $columnv = preg_replace('/[a-z_0-9]+/', '?', $column);
+            $columnv = preg_replace('/[a-z_A-Z_0-9\_]+/', '?', $column);
             $columnv = implode(',', $columnv);
             $column = implode(',', $column);
             $pastes = implode('', $paste);
-
             if ($tables != '' && $column != '' && $pastes != '') {
                 $this->db->insertRow("INSERT INTO $tables ($column) VALUE($columnv)", $paste);
                 $this->db->Disconnect();
@@ -42,4 +41,6 @@ class DInsert
         }
     return  $this->err;
     }
+
+   
 }

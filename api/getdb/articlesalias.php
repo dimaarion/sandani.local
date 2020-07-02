@@ -1,5 +1,7 @@
 <?php
 require_once('index.php');
-$art = new Articles();
-$r = $art->getArticlesAlias();
-echo  json_encode($r);
+$sansize = new Sansize();
+$art = new DSelect('articles');
+$alias = $sansize->getrequest('art_alias');
+$alias = str_replace('/', "", $alias);
+echo  json_encode($art->queryRow('art_alias', $alias));
