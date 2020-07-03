@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link href="/fonts/OpenSansCondensed-LightItalic.ttf" />
     <title>Административная панель</title>
-    <link href="/admin/static/css/main.622849e3.chunk.css" rel="stylesheet">
+    <link href="/admin/static/css/main.56e0760b.chunk.css" rel="stylesheet">
 </head>
 
 <body>
@@ -92,8 +92,8 @@
             t()
         }([])
     </script>
-    <script src="/admin/static/js/2.dd11797c.chunk.js"></script>
-    <script src="/admin/static/js/main.055e8d88.chunk.js"></script>
+    <script src="/admin/static/js/2.a717287e.chunk.js"></script>
+    <script src="/admin/static/js/main.9968de5d.chunk.js"></script>
 </body>
 
 </html>

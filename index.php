@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link href="/fonts/OpenSansCondensed-LightItalic.ttf" />
+    <link rel="stylesheet" href="/css/call.css" />
     <title>Sandani</title>
     <link href="/static/css/main.5fce97bd.chunk.css" rel="stylesheet">
 </head>
@@ -91,8 +92,8 @@
             t()
         }([])
     </script>
-    <script src="/static/js/2.18056be9.chunk.js"></script>
-    <script src="/static/js/main.1c9d08e0.chunk.js"></script>
+    <script src="/static/js/2.14504dc2.chunk.js"></script>
+    <script src="/static/js/main.ad246b89.chunk.js"></script>
     <script src="/js/message.js"></script>
 </body>
 

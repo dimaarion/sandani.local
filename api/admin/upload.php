@@ -23,9 +23,9 @@ echo $upload->size;
        
         if (document.title == 'Ошибка загрузки.') {     
            
-                    document.location = 'http://localhost:3000/admin/index.php/files/no_files';
+                    document.location = '/admin/index.php/files/no_files';
         } else {
-                    document.location = 'http://localhost:3000/admin/index.php/files/on_files';
+                    document.location = '/admin/index.php/files/on_files';
               
         }
     </script>
