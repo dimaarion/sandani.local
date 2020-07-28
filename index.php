@@ -1,3 +1,11 @@
+<?php
+spl_autoload_register(function ($className) {
+    require 'api/classes/' . $className . '.php';
+});
+$trafik = new DTrafik();
+$trafik->trafikDay();
+
+?>
 <!doctype html>
 <html lang="en">
 

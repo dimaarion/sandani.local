@@ -91,6 +91,7 @@ class Menu
         $content = $this->sansize->getrequest('menu_content');
         $img = $this->sansize->getrequest('menu_img');
         $parent = $this->sansize->getrequest('parent');
+        
         $this->db->updateRow("UPDATE menu SET menu_art_id = ?,  menu_name = ?, menu_alias = ?, menu_title = ?, menu_keyword = ?, menu_descript = ?, menu_content = ?, menu_img = ?, parent = ?
         WHERE menu_id = ?", [$id_menu_art, $names, $alias, $title, $keyword, $descript, $content, $img, $parent, $id]);
         $this->db->Disconnect();
