@@ -6,13 +6,11 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
-    <link rel="apple-touch-icon" href="/logo192.png" />
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
-    <link rel="apple-touch-icon" href="/logo192.png" />
-    <link href="/fonts/OpenSansCondensed-LightItalic.ttf" />
+    <meta name="description" content="Административная панель" />
+    <link rel="stylesheet" href="/admin/bootstrap/css/bootstrap.css" />
+    <link href="/admin/fonts/OpenSansCondensed-LightItalic.ttf" />
     <title>Административная панель</title>
-    <link href="/admin/static/css/main.56e0760b.chunk.css" rel="stylesheet">
+    <link href="/admin/static/css/main.0d529b6c.chunk.css" rel="stylesheet">
 </head>
 
 <body>
@@ -84,7 +82,7 @@
             }, a.o = function(e, r) {
                 return Object.prototype.hasOwnProperty.call(e, r)
             }, a.p = "/";
-            var i = this["webpackJsonpsandani.admin"] = this["webpackJsonpsandani.admin"] || [],
+            var i = this.webpackJsonpsandani = this.webpackJsonpsandani || [],
                 l = i.push.bind(i);
             i.push = r, i = i.slice();
             for (var f = 0; f < i.length; f++) r(i[f]);
@@ -92,8 +90,8 @@
             t()
         }([])
     </script>
-    <script src="/admin/static/js/2.a717287e.chunk.js"></script>
-    <script src="/admin/static/js/main.9968de5d.chunk.js"></script>
+    <script src="/admin/static/js/2.b1cf1a05.chunk.js"></script>
+    <script src="/admin/static/js/main.b1a2adfb.chunk.js"></script>
 </body>
 
 </html>

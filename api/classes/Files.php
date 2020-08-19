@@ -21,7 +21,7 @@ class Files
         $idfiles = $sansize->getrequest('idfiles');
         if ($idfiles) {
             if (@unlink($idfiles)) {
-                return 'Файл' . $idfiles . ' успешно удален.';
+                return 'Файл ' . $idfiles . ' успешно удален.';
             } else {
                 return 'Ошибка удаления файла.';
             }

@@ -35,10 +35,10 @@ class DUpdate
                 $this->db->Disconnect();
                 $this->err = 1;
             } else {
-                $this->err = 0;
+                $this->err = 01;
             }
         } else {
-            $this->err = 0;
+            $this->err = 02;
         }
     }
 }

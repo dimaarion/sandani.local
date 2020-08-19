@@ -3,7 +3,7 @@ spl_autoload_register(function ($className) {
     require 'api/classes/' . $className . '.php';
 });
 $trafik = new DTrafik();
-$trafik->trafikDay();
+//$trafik->trafikDay();
 
 ?>
 <!doctype html>

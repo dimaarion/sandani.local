@@ -33,14 +33,28 @@ class DInsert
                 $this->db->insertRow("INSERT INTO $tables ($column) VALUE($columnv)", $paste);
                 $this->db->Disconnect();
                 $this->err = 'Статья успешно создана!';
-            }else{
+            } else {
                 $this->err = 'Ошибка! не все заполнено.';
             }
         } else {
             $this->err = 'Ошибка! массивы не совпадают.';
         }
-    return  $this->err;
+        return  $this->err;
     }
 
-   
+    public function isertMenuArt($id_menu, $art, $column = [])
+    {
+
+        if ($id_menu && $art) {
+            $st = '),(' . $id_menu . ',';
+            $art = str_replace(',', '', $art);
+            $art = str_split($art);
+            $art = implode(' ', $art);
+            $art = str_replace(' ', $st, $art);
+            $values = '(' . $id_menu . ',' . $art . ')';
+            $column = implode(',', $column);
+            $this->db->insertRow("INSERT INTO $this->tables($column) VALUES $values");
+            $this->db->Disconnect();
+        }
+    }
 }

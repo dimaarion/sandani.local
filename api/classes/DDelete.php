@@ -35,11 +35,14 @@ class DDelete
 
     public function deleteMenu($delete, $id, $idmenuart)
     {
-        if ($delete == 'delete') {
+        if ($delete == 'delete' && isset($id) && isset($idmenuart)) {
             $id = str_replace('delete-', '', $id);
             $this->db->deleteRow("DELETE FROM menu WHERE menu_id = ?", [$id]);
             $this->db->deleteRow("DELETE FROM menu_articles WHERE menu = ?", [$idmenuart]);
             $this->db->Disconnect();
+            $this->err = 'ok';
+        }else{
+            $this->err = 'no';
         }
     }
 }
