@@ -26,5 +26,6 @@ $menu =  new DInsert(
         $sansize->getrequest('parent')
     ]
 );
-
+$menuart =  new DInsert('menu_articles');
+$menuart->isertMenuArt($sansize->getrequest('menu_art_id'), $sansize->getrequest('articles'), ['menu', 'articles']);
 echo json_encode($_REQUEST);
