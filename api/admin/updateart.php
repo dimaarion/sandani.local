@@ -24,7 +24,7 @@ $art =  new DUpdate(
         $sansize->getrequest('art_keyword'),
         $sansize->getrequest('art_descript'),
         $sansize->getrequest('art_subcontent'),
-        $sansize->getrequest('art_content'), 
+        $_REQUEST['art_content'], 
         $sansize->getrequest('params'),
     ],
     $sansize->getrequest('art_id')
