@@ -7,7 +7,7 @@ $trafik = new DTrafik();
 
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="utf-8" />
@@ -16,6 +16,12 @@ $trafik = new DTrafik();
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app" />
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/template.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/basis.css">
+    <link rel="stylesheet" href="/css/mob.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/call.css" />
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link href="/fonts/OpenSansCondensed-LightItalic.ttf" />
     <link rel="stylesheet" href="/css/call.css" />
