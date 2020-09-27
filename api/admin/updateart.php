@@ -17,16 +17,20 @@ $art =  new DUpdate(
     ],
 
     [
-        $sansize->getrequest('art_img'),
-        $sansize->getrequest('art_name'),
-        $sansize->getrequest('art_title'),
-        $sansize->getrequest('art_alias'),
-        $sansize->getrequest('art_keyword'),
-        $sansize->getrequest('art_descript'),
-        $sansize->getrequest('art_subcontent'),
-        $_REQUEST['art_content'], 
+        $sansize->getrequest('img'),
+        $sansize->getrequest('name'),
+        $sansize->getrequest('title'),
+        $sansize->getrequest('alias'),
+        $sansize->getrequest('keyword'),
+        $sansize->getrequest('descript'),
+        $sansize->getrequest('subcontent'),
+        $_REQUEST['content'], 
         $sansize->getrequest('params'),
     ],
     $sansize->getrequest('art_id')
 );
-echo json_encode($_REQUEST);
+
+if($_REQUEST){
+    header('location:/admin/index.html/articlesupdate/'. $_REQUEST['art_id']);
+}
+

@@ -15,17 +15,17 @@ $insert = new DInsert(
         'params'
     ],
     [
-        $sansize->getrequest('art_img'),
-        $sansize->getrequest('art_name'),
-        $sansize->getrequest('art_title'),
-        $sansize->getrequest('art_alias'),
-        $sansize->getrequest('art_keyword'),
-        $sansize->getrequest('art_descript'),
-        $sansize->getrequest('art_subcontent'),
-        $sansize->getrequest('art_content'),
+        $sansize->getrequest('img'),
+        $sansize->getrequest('name'),
+        $sansize->getrequest('title'),
+        $sansize->getrequest('alias'),
+        $sansize->getrequest('keyword'),
+        $sansize->getrequest('descript'),
+        $sansize->getrequest('subcontent'),
+        $sansize->getrequest('content'),
         $sansize->getrequest('params'),
         
     ]
 );
+header('location:/admin/index.html/articles/1');
 
-echo json_encode($insert->err);
