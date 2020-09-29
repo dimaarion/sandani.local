@@ -31,6 +31,6 @@ $art =  new DUpdate(
 );
 
 if($_REQUEST){
-    header('location:/admin/index.html/articlesupdate/'. $_REQUEST['art_id']);
+    header('location:/admin'. $_REQUEST['art_id']);
 }
 

@@ -2,7 +2,6 @@ ErrorDocument 404 /err.php
 
 RewriteEngine On
 RewriteRule ^([a-z-_A-Z]+)\.html$ index.html?id=$1
-RewriteRule ^(admin)/([a-z-_A-Z]+)/([a-z-_A-Z_0-9]+)$ ?admin=$1&adminid=$2
 
 <files config.json>
 order allow,deny

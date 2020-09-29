@@ -27,5 +27,5 @@ $insert = new DInsert(
         
     ]
 );
-header('location:/admin/index.html/articles/1');
+header('location:/admin');
 
