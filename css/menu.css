@@ -4,7 +4,15 @@
     margin-top: 0px;
 }
 #menu ul li a{
-   
+    color: #333333;
+    padding-bottom: 30px;
+    display: block;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-variant: petite-caps;
+    
+}
+#menu ul li a:hover{
+    color: green;
     padding-bottom: 30px;
     display: block;
     font-family: 'Open Sans Condensed', sans-serif;
