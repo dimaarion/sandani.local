@@ -1,1 +1,0 @@
-SELECT `articles` FROM `sandani`.`store`;
