@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id = "messagePages">
     <h2>Напишите нам сообщение</h2>
     <p>Если у Вас есть вопросы или Вы желаете оставить заявку на замер окон, заполните форму, приведенную ниже.</p>
 
@@ -54,4 +54,3 @@
         <div class="col-sm-3"></div>
     </div>
 </div>
-<script src="/js/message.js"></script>

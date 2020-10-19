@@ -11,7 +11,8 @@
         <?php $controller->includer(true, true, './template/menu.php', $controller, $menu_class, $menu_alias); ?>
         <div class="lineHead"></div>
         <?php $controller->includer(true, true, './template/linckpanel.php', $controller); ?>
-    </header>
+    </header>  
+    <?php $controller->includer(true, true, './template/messageicon.php', $controller);?>
     <article>
         <div class="row justify-content-md-center">
             <div class="col col-lg-1"></div>
@@ -21,16 +22,16 @@
                             <?php
                             $controller->includer($sansize->getrequest('alias'), '', './template/gallery.php', $controller);
                             $controller->includer($controller->indexPage($sansize->getrequest('alias'), '.html'), $art_menu[0]['alias'], './template/subart.php', $controller, $art_menu);
-                            $controller->includer($sansize->getrequest('alias'), 'message', './template/message.php', $controller);
                             $controller->includer($controller->indexPage($sansize->getrequest('alias'), '.html'), $artRow['art_alias'], './template/articles.php', $controller, $artRow);
-                            $controller->includer($sansize->getrequest('alias'), 'calculator', './template/calculator.php', $controller, $artRow); 
-                           
+                            $controller->includer($sansize->getrequest('alias'), 'calculator', './template/calculator.php', $controller, $artRow);
+                            $controller->includer($sansize->getrequest('alias'), 'message', './template/message.php', $controller);
                             ?>
                 </div>
             </div>
             <div class="col col-lg-1"></div>
         </div>
     </article>
+    <?php $controller->includer(true, true, './template/footer.php', $controller); ?>
 </body>
 
 </html>

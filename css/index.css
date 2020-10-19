@@ -31,10 +31,10 @@ h2:hover a{
 }
 .boot a{
     color: #009559;
-    margin-top: 5px;
     transition: 1s; 
     z-index: 1000;
     position: relative;
+    display: block;
 }
 
 

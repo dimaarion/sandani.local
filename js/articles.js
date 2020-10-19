@@ -5,8 +5,9 @@ $(document).ready(function () {
         {
             padding:'10px',
             width:'100%',
+            height:'auto',
             margin: 'auto',
-            float:'inline-end'
+            float:'none'
            
 
         }
@@ -15,6 +16,7 @@ $(document).ready(function () {
        (x !== 0)? $('#content img').eq(x).css({
            padding: '10px',
            width: '30%',
+           height: 'auto',
        }):''
      })
   

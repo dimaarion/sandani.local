@@ -11,7 +11,7 @@
 		<div class="col-sm">
 			<nav id="menu" style="margin-top: 60px;">
 				<ul class="nav justify-content-end">
-					<?php $x->menu_recursions($x2['alias'],'style = "color:green;"'); ?>
+					<?php $x->menu_recursions($x2['alias'], 'style = "color:#009559;"'); ?>
 				</ul>
 			</nav>
 		</div>

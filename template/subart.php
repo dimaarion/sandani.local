@@ -11,7 +11,13 @@
                         <?php echo html_entity_decode($value['art_subcontent'], ENT_HTML5); ?>
                     </div>
                     <div class="row">
-                        <div class="boot col-5 text-center p-0 mt-3 ">
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="boot col text-center p-0">
                             <div class="bootbg"></div><a href="/<?php echo $value['art_alias']; ?>">Подробнее...</a>
                         </div>
                     </div>

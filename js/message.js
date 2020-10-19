@@ -26,10 +26,10 @@ m = {
         let colors = "green";
         e.onkeyup = (e) => {
             input.value = e.target.value.length;
-           
-           
-            
-            if (sm == 'str') { 
+
+
+
+            if (sm == 'str') {
                 m.getid('namespan').style.color = colors;
                 inners.innerHTML = ' : ' + m.filterStr(e.target.value, m.pregStr, r);
                 e.target.value = m.filterStr(e.target.value, m.pregStr, r);
@@ -59,7 +59,7 @@ m = {
                 inners.innerHTML = ' : ' + (errMail !== null) ? errMail : '';
                 e.target.value = fMail;
             }
-            if (sm == 'tel') { 
+            if (sm == 'tel') {
                 m.getid('telspan').style.color = colors;
                 let h = []
                 let filter = m.filterStr(e.target.value, m.pregTel, r);
@@ -150,9 +150,9 @@ m = {
         let theme = m.getid('theme');
         let message = m.getid('message');
         let fl;
-        
+
         f.onsubmit = (event) => {
-           
+
             if (!username.value) {
                 m.getid('namespan').innerHTML = "Напишите ваше имя.";
                 m.getid('namespan').style.color = 'red';
@@ -198,11 +198,28 @@ m = {
 
 
 
+    },
+    errors() {
+        function udefineTest(e) {
+            if(e != undefined){
+                return e;
+            }else{
+                return ' ';
+            }
+        }
+        if (m.getid('messagePages') !=undefined){
+            m.getid('messagePages')
+            .getElementsByTagName('h2')[0]
+                 .innerHTML = 'Напишите нам сообщение <div id = "messageOpov">' + udefineTest(decodeURI(document.baseURI).split('=')[1]) + '</div>';
+
+        }
     }
 }
 
 
+$(document).ready(function () {
+    m.kursors();
+    m.errors();
+});
 
-
-m.kursors();
 

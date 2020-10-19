@@ -15,7 +15,10 @@ $artRow = $articleClassRow->queryRow('art_alias', $controller->indexPage($sansiz
 $menu = $menuClassRows->queryRows();
 $menu_class->props = $menu;
 $art_menu = $art_menu_select->queryRowWhere('menu.menu_id = art_menu.menu AND art_id = art_menu.articles AND menu.menu_id =' . $menu_alias['menu_id']);
+//переадресация на главную если статьи не существует
+$controller->redirects($controller->ifElseContent($controller->ifElseContent($artRow['art_alias'],$menu_alias['alias']),'nopage'), 'nopage','/');
 // Отправка письма
+
 function intFilter($val)
 {
     if (isset($val)) {
@@ -47,10 +50,10 @@ $countform = $nameh + $telh  + $mailh + $temah + $contenth;
 $countformto = strlen($name) + strlen($tel) + strlen($mail) + strlen($tema) + strlen($content);
 if ($countform != 0 && $countformto != 0) {
     if ($nameh != 0 && $telh != 0 && $mailh != 0 && $temah != 0 && $contenth != 0) {
-        new DMail('dimaarion@gmail.com', '<b>sandani</b><noreply@sandani.ru>', $tema, ['name' => 'Ф. И. О: ' . $name, 'Телефон: ' . 'tel' => $tel, 'mail' => 'Почта: ' . $mail, 'message' => $content]);
-        header('location:/message.html?id=Письмо отправлено');
+        new DMail('19197908an@mail.ru', 'sandani<noreply@sandani.ru>', $tema, ['name' => 'Ф. И. О: ' . $name, 'Телефон: ' . 'tel' => $tel, 'mail' => 'Почта: ' . $mail, 'message' => $content]);
+        header('location:/message.html?id=Сообщение отправлено!');
     } else {
-        header('location:/message.html?id=Ошибка! Письмо не отправлено ');
+        header('location:/message.html?id=Ошибка! Сообщение не отправлено ');
     }
 } 
 

@@ -1,0 +1,35 @@
+User-agent: Yandex
+Allow: /
+Disallow: /adminpanel/
+Disallow: /api/
+Disallow: /bootstrap/
+Disallow: /static/
+Disallow: /bs-custom-file-input/
+Disallow: /jquery/
+Disallow: /message/
+Disallow: /img/
+Disallow: /js/
+Disallow: /css/
+Disallow: /template/
+Disallow: /index.php?
+
+
+
+
+
+User-agent: *
+Allow: /
+Disallow: /adminpanel/
+Disallow: /api/
+Disallow: /bootstrap/
+Disallow: /static/
+Disallow: /bs-custom-file-input/
+Disallow: /jquery/
+Disallow: /message/
+Disallow: /img/
+Disallow: /js/
+Disallow: /css/
+Disallow: /template/
+Disallow: /index.php?
+
+Host: https://sandani.ru
