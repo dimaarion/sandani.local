@@ -15,3 +15,5 @@
 
         <title><?php echo $controller->ifElseContent($arr['title'], $row['art_title']); ?></title>
         <link href="./static/css/main.2680dfa7.chunk.css" rel="stylesheet">
+
+       
