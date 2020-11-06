@@ -4,5 +4,6 @@ RewriteEngine On
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP
 RewriteRule ^index\.php$ https://sandani.ru/ [R=301,L]
 RedirectMatch ^/index.php/(.*)$ https://sandani.ru/
+RedirectMatch ^http://sandani.ru/(.*).html$ https://sandani.ru/(.*).html/
 RewriteRule ^([a-z-_A-Z_0-9]+).html$ index.php?alias=$1
 
