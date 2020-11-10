@@ -1,7 +1,7 @@
 <?php require_once "./template/function.php"; ?>
 <!DOCTYPE html>
 <html>
-
+erger
 <head>
     <?php $controller->includer(true, true, './template/header.php', $controller, $controller->dirExt('css'), $controller->dirExt('js'), $menu_alias, $artRow); ?>
 </head>
