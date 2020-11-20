@@ -7,19 +7,18 @@ $id = $arr->getrequest('id4');
 $activeSt = 'background-color: #cccccc;';
 $st = 'background-color: #ffffff;';
 $num = 4;
-if($okno == 'do' || $okno == 'to'){
+if ($okno == 'do' || $okno == 'to') {
     $num = 9;
 }
+
 ?>
 
 <table class="table">
-    
     <thead>
-        
         <tr class="text-center">
-            <th scope="col">
+            <th scope="col text-left">
 
-                <?php echo $controller->calculator_profile($profile); ?>
+                <div class="text-left"><?php echo $controller->calculator_profile($profile) . '<br>' . $controller->calculator_okno($okno) . '<br>' . $controller->calculator_stvorka($stvorka); ?></div>
             </th>
             <?php for ($i = 0; $i < 8; $i++) : ?>
                 <th scope="col">1<?php echo $i; ?>00</th>
@@ -28,7 +27,7 @@ if($okno == 'do' || $okno == 'to'){
     </thead>
     <tbody>
         <?php
-        for ($i = 5,$ins = $num, $a = -8, $b = -7, $c = -6, $d = -5, $e = -4, $g = -3, $j = -2, $l = -1; $i < 13; $i++) :
+        for ($i = 5, $ins = $num, $a = -8, $b = -7, $c = -6, $d = -5, $e = -4, $g = -3, $j = -2, $l = -1; $i < 13; $i++) :
             $a = $a + 8;
             $b = $b + 8;
             $c = $c + 8;

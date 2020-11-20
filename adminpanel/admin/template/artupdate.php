@@ -1,5 +1,5 @@
 <?php $controller->includer(true, true, './admin/template/headtitle.php', $controller, 'Статьи', 'редактировать статью'); ?>
-
+<h3 class="text-center"><?php echo $x['art_names']; ?></h3>
 <form id="menunain" action="/adminpanel/articles/updateart/<?php echo $x['art_id']; ?>" method="post">
 
     <div class="mt-4 row">
