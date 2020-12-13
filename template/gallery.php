@@ -1,1 +1,1 @@
- <img src="/img/icon/blvol.png" alt="slider" width="100%">
+ <img src="/img/icon/novGod.png" alt="slider" width="100%">
